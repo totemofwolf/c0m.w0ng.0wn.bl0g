@@ -21,6 +21,15 @@ mkdir -p ~/rpmbuild/{BUILD,RPMS,SOURCES,SPECS,SRPMS}
 cd rpmbuild/
 ```
 
+## 在家目录编写.rpmmacros(自定义制作路径)
+```
+#.rpmmacros
+%_topdir /home/rpmbuild/rpmbuild
+%_tmppath /home/rpmbuild/rpmbuild/tmp
+%buildroot /home/rpmbuild/rpmbuild/BUILDROOT
+%_prefix   /
+```
+
 ### 准备SPECS文件：
 ```
 cat > SPECS/tengine.spec
